@@ -1,0 +1,60 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Ankiety &bull; {{ title }}</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'polls/style.css'%}">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+</head>
+
+<body>
+
+
+
+    <ul class="nav nav-pills">
+
+        <a href="{% url 'polls:index' %}"><img
+                src="https://pbs.twimg.com/profile_images/1168557866271334401/iX9TQtl8_400x400.jpg" alt=""></a>
+
+        <li class="nav-item">
+            <a class="nav-link" href="http://127.0.0.1:8000/polls/1">Pytanie 1</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="http://127.0.0.1:8000/polls/2">Pytanie 2</a>
+        </li>
+
+    </ul>
+
+    <div class="container-fluid">
+        <img src="https://ak.picdn.net/shutterstock/videos/1010260439/thumb/11.jpg" alt="">
+        <div class="textbox">
+            <div class="top">
+                <h1>{{ title }}</h1>
+            </div>
+            <div class="bottom">
+                <main>{% block content %}{% endblock %}</main>
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous">
+    </script>
+</body>
+
+</html>
